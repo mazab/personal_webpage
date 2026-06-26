@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VanGiza — Software solutions</title>
 <meta name="description" content="VanGiza builds well-engineered, stable, and reliable software. Van, from the Netherlands. Giza, from Egypt.">
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
@@ -51,11 +52,10 @@
     border-bottom:1px solid var(--line);
   }
   .brand{
-    font-family:var(--font-display);font-weight:700;
-    font-size:1.35rem;letter-spacing:-.01em;color:var(--ink);
+    display:inline-flex;align-items:center;flex:none;
     text-decoration:none;
   }
-  .brand b{color:var(--ochre);font-weight:700}
+  .brand-logo{display:block;width:clamp(112px,28vw,174px);height:auto}
 
   /* ---- 3-way language slider ---- */
   .lang{
@@ -200,7 +200,9 @@
 <div class="wrap">
 
   <header class="topbar">
-    <a class="brand" href="#">Van<b>Giza</b></a>
+    <a class="brand" href="#" aria-label="VanGiza">
+      <img class="brand-logo" src="assets/logo-full.svg" alt="VanGiza">
+    </a>
     <div class="lang" role="group" aria-label="Language / Taal / اللغة">
       <span class="lang-pill" aria-hidden="true"></span>
       <button class="lang-btn" data-lang="nl" aria-pressed="true">NL</button>
