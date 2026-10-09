@@ -1,0 +1,11 @@
+#!/bin/sh
+# Publish the site to the vangiza-webpage Worker (vangiza.com, vangiza.nl).
+# Stages only the served files into dist/ so nothing else in the repo is uploaded.
+# Extra arguments pass through, e.g. ./deploy --dry-run
+set -e
+cd "$(dirname "$0")"
+rm -rf dist
+mkdir dist
+cp -R index.html assets app-ads.txt dist/
+find dist -name .DS_Store -delete
+wrangler deploy "$@"

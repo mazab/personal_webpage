@@ -1,0 +1,14 @@
+{
+  // Static site for vangiza.com and vangiza.nl (Worker "vangiza-webpage"),
+  // mirroring the live Worker's settings. Deploy: ./deploy (stages the site into dist/)
+  "name": "vangiza-webpage",
+  "compatibility_date": "2026-07-07",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "routes": [
+    { "pattern": "vangiza.com", "custom_domain": true },
+    { "pattern": "vangiza.nl", "custom_domain": true }
+  ],
+  "assets": { "directory": "./dist" },
+  "observability": { "enabled": true }
+}
